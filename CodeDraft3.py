@@ -29,16 +29,16 @@ st.markdown(
 
     .subtitle {
         text-align: center;
-        color: #aa6f73;
-        font-size: 18px;
+        color: #a39193;
+        font-size: 24px;
         font-weight: 600;
         margin-bottom: 28px;
     }
 
     div[data-testid="stRadio"] {
         background: #f6e0b5;
-        padding: 16px 18px;
-        border-radius: 8px;
+        padding: 20px 24px;
+        border-radius: 10px;
         border: 1px solid #c8d1cc;
         margin-bottom: 12px;
         color: #17252a;
