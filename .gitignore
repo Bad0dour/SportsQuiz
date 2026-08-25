@@ -1,0 +1,4 @@
+BoringStuff/service_account.json
+.venv/
+__pycache__/
+.DS_Store
