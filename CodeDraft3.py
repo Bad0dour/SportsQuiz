@@ -143,7 +143,7 @@ def ask(question1: str, question2: str, key: str) -> int:
         return 1
     return 0
 
-gc = gspread.service_account(filename="BoringStuff/service_account.json")
+gc = gspread.service_account_from_dict(st.secrets["gcp_service_account"])
 sheet = gc.open_by_key("1zBDU1tVMppV0JTV2dWlSguEClaEHiiMLtoYqW_7JC_Y").sheet1
 
 # Dynamics begin Below V
