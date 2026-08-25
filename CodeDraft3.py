@@ -16,12 +16,12 @@ st.markdown(
     """
     <style>
     .stApp {
-        background: #f4f6f1;
-        color: #FFCC99;
+        background: #aa6f73;
+        color: #66545e;
     }
 
     h1 {
-        color: #12343b;
+        color: #f6e0b5;
         text-align: center;
         font-size: 42px;
         font-weight: 800;
@@ -29,14 +29,14 @@ st.markdown(
 
     .subtitle {
         text-align: center;
-        color: #425457;
+        color: #a39193;
         font-size: 18px;
         font-weight: 600;
         margin-bottom: 28px;
     }
 
     div[data-testid="stRadio"] {
-        background: #ffffff;
+        background: #a39193;
         padding: 16px 18px;
         border-radius: 8px;
         border: 1px solid #c8d1cc;
