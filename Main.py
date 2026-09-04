@@ -80,24 +80,6 @@ features: list[str] = [
     "Running",
 ]
 
-# Dictionary of Sports and a number associated with them because the DecisionTree can't do strings.
-sports_dict: dict[str, int] = {
-    "Basketball":0,
-    "Soccer":1,
-    "Volleyball":2,
-    "AFL":3,
-    "Rugby":4,
-    "Golf":5,
-    "Track":6,
-    "Tennis":7,
-    "Cricket":8,
-    "Swimming":9,
-    "Badminton":10,
-    "Boxing":11,
-    "Table Tennis":12,
-} 
-sports_data: list[int] = []
-
 
 # Create DataFrame from the data
 data_df = pd.read_csv(FILE_PATH, names=df_cols)
