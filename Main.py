@@ -1,9 +1,10 @@
 import csv, time
 import pandas as pd
+from sklearn import tree
 from sklearn.tree import DecisionTreeClassifier
 
 #~~~~~~~~~~~~#
-DEBUG = False
+DEBUG = True
 FILE_PATH = "sport_data.csv"
 #~~~~~~~~~~~~#
 
@@ -103,5 +104,7 @@ usr_pref = [ask(questions[i], anti_questions[i]) for i in range(len(questions))]
 
 if DEBUG:
     print(f"usr_pref: {usr_pref}")
-
+    text_representation = tree.export_text(dtree,feature_names=features, show_weights=True)
+    print(text_representation)
+    
 reveal_result(dtree.predict([usr_pref])[0])
