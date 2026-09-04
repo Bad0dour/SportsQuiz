@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
 
 #~~~~~~~~~~~~#
-DEBUG = True
+DEBUG = False
 FILE_PATH = "sport_data.csv"
 #~~~~~~~~~~~~#
 
