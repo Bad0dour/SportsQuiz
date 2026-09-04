@@ -11,10 +11,10 @@ FILE_PATH = "sport_data.csv"
 pd.set_option('display.max_columns', 1000)
 pd.set_option('display.width', 1000)
 
-def ask(question1: str, question2: str) -> int:
+def ask(option1: str, option2: str) -> int:
     # Keep asking until the user enters a valid answer.
     while True:
-        answer = input(f"Do you prefer {question1} (1) or {question2} (2)? [1/2] : ")
+        answer = input(f"Do you prefer {option1} (1) or {option2} (2)? [1/2] : ")
 
         if answer == "1":
             return 1
