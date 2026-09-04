@@ -1,4 +1,4 @@
-import csv, time
+import time
 import pandas as pd
 from sklearn import tree
 from sklearn.tree import DecisionTreeClassifier
@@ -57,7 +57,7 @@ anti_questions: list[str] = [
 ]   # 0 means the user prefers the opposite option in `anti_questions`.
 
 # List of Nicknames for each column/question for script to use for headers
-df_cols: list[str] = [
+traits: list[str] = [
     "Indoors",
     "Team",
     "Contact",
@@ -70,16 +70,16 @@ df_cols: list[str] = [
 ]
 
 # Create DataFrame from the data
-data_df = pd.read_csv(FILE_PATH, names=df_cols)
+data_df = pd.read_csv(FILE_PATH, names=traits)
 
 if DEBUG:
     print(f"""Data DataFrame:\n{data_df}""")
-    print(f"""data_df[df_cols[0:-1]]:\n{data_df[df_cols[0:-1]]}""")
+    print(f"""data_df[df_cols[0:-1]]:\n{data_df[traits[0:-1]]}""")
     print(f"""data_df['SPORT']:\n{data_df['SPORT']}""")
 
 # Train a decision tree using the sport data.
 # X is the question data, and Y is the sports associated with the question data.
-X = data_df[df_cols[0:-1]]
+X = data_df[traits[0:-1]]
 y = data_df['SPORT']
 dtree = DecisionTreeClassifier(random_state=0)
 dtree = dtree.fit(X, y)
