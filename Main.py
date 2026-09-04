@@ -69,30 +69,17 @@ df_cols: list[str] = [
     "SPORT",
 ]
 
-# Nicknames for each column/question for script to use for headers and calculations EXCLUDING SPORT
-features: list[str] = [
-    "Indoors",
-    "Team",
-    "Contact",
-    "Hands",
-    "Breaks",
-    "Slow",
-    "Water",
-    "Running",
-]
-
-
 # Create DataFrame from the data
 data_df = pd.read_csv(FILE_PATH, names=df_cols)
 
 if DEBUG:
     print(f"""Data DataFrame:\n{data_df}""")
-    print(f"""data_df[features]:\n{data_df[features]}""")
+    print(f"""data_df[df_cols[0:-1]]:\n{data_df[df_cols[0:-1]]}""")
     print(f"""data_df['SPORT']:\n{data_df['SPORT']}""")
 
 # Train a decision tree using the sport data.
 # X is the question data, and Y is the sports associated with the question data.
-X = data_df[features]
+X = data_df[df_cols[0:-1]]
 y = data_df['SPORT']
 dtree = DecisionTreeClassifier(random_state=0)
 dtree = dtree.fit(X, y)
